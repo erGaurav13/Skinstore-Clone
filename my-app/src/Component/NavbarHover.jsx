@@ -8,7 +8,7 @@ import {Link} from "react-router-dom"
 
 return <div>
      	
-  <div class="navbw" id="navbar">
+  <div class="navbw" id="navbar"  >
         <ul>
           <li>
             <Link to="/sale" class="anchortag">SALE</Link>
