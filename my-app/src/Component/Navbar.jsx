@@ -11,14 +11,14 @@ export const Navbar =()=>{
     //to get the HEIGHT AND WIDTH
     const { height, width } = useWindowDimensions();
     return <>
+     
      <div>
       {/* width: {width} ~ height: {height} */}
     </div>
-    {/* <Link to="/">Home</Link>
-    <Link to="/login">Login</Link>
-    <Link to="/cart">Cart</Link> */}
+    <Box  position="sticky" w="100%" top="0px" display="block" zIndex={+6}>
    {width>=1014?
-    <Flex minWidth='max-content' alignItems='center' gap='2'bg="white" borderBottom={"2px"}  >
+  
+    <Flex    minWidth='max-content' alignItems='center' gap='2'bg="white" borderBottom={"2px"}  >
   <Box p='2' pl={"22px"}>
     <Heading  size='xl'>SkinStore</Heading>
     <Text fontSize={10}> part of the LOOKFANTASTIC group</Text>
@@ -46,11 +46,11 @@ export const Navbar =()=>{
   <ButtonGroup gap='2'>
     <Button colorScheme='teal'>Sign Up</Button>
     <Button colorScheme='teal'>Log in</Button>
-    <Button colorScheme='teal'>Cart</Button>
+    <Button colorScheme='teal'><Link to="/cart" >Cart</Link></Button> 
   </ButtonGroup>
-</Flex>:
+    </Flex>:
 
-<Flex minWidth='max-content' alignItems='center' gap='2'bg="white" borderBottom={"2px"} >
+    <Flex  minWidth='max-content' alignItems='center' gap='2'bg="white" borderBottom={"2px"} >
  
 
   <Box>
@@ -71,7 +71,9 @@ export const Navbar =()=>{
     {/* <Button colorScheme='teal'>Log in</Button> */}
     <Button bg="white" ><IconButton  icon={<CartIcon/>}/></Button>
   </ButtonGroup>
-</Flex>}
-<NavbarHover/>
+    </Flex>}
+      <NavbarHover  />
+      </Box>
+
     </>
 }
