@@ -2,6 +2,7 @@ import {Routes,Route}   from "react-router-dom"
 import {Login} from "../AllPages/Login"
 import {Home} from "../AllPages/Home"
 import {Cart} from "../AllPages/Cart"
+import { SignUp } from "../AllPages/SignUp"
 import Brand from "../Pages/Brand"
 import Fragrance from "../Pages/Fragrance"
 import HairCare from "../Pages/HairCare"
@@ -15,6 +16,7 @@ return <>
 <Routes>
  <Route path="/" element={<Home/>} />
  <Route path="/login" element={<Login/>} />
+ <Route path="/signup" element={<SignUp/>} />
  <Route path="/cart" element={<Cart/>} />
  <Route path="/brands" element={<Brand/>} />
  <Route path="/fragrance" element={<Fragrance/>} />

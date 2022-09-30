@@ -44,8 +44,8 @@ export const Navbar =()=>{
     <Spacer />
 
   <ButtonGroup gap='2'>
-    <Button colorScheme='teal'>Sign Up</Button>
-    <Button colorScheme='teal'>Log in</Button>
+    <Link to="/signup" > <Button colorScheme='teal'>Sign Up</Button></Link> 
+    <Link to="/login">   <Button colorScheme='teal'>Log in</Button> </Link>
     <Button colorScheme='teal'><Link to="/cart" >Cart</Link></Button> 
   </ButtonGroup>
     </Flex>:
