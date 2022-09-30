@@ -7,7 +7,7 @@ import {Add} from "../AllReducer/Action"
 let data3=[{
     image:"https://static.thcdn.com/images/small/webp/widgets/121-us/39/1224-STDCRE-28425-WC-SS-SkinStore-January-Photography-2022-BATCHING_Shot17-600x600-053341-095839.jpg",
     title: "Skin Gift",
-    detail:"Receive 2 SkinCeuticals Triple Lipid Restore 2:4:2 Sample when you spend $150 or more on the brand. "
+    detail:"Receive 2 SkinCeuticals Triple Lipid Restore 2:4:2 Sample when you spend $150 orSkinCeuticals Triple Lipid Restore  more on the brand. "
 },
 {    image:"https://static.thcdn.com/images/small/webp/widgets/121-us/27/Anti_age_discoloration_sq-062227.jpg",
 title: "SkinVectin",
@@ -71,7 +71,7 @@ let data5=[
     {
     img:"https://cdn00.nnnow.com/web-images/large/styles/I8UUFDY6LA6/1633524342165/1.jpg", 
     name:"CLINIQUE", 
-    description:"Clinique Smart Clinical Repair Wrinkle correcting Serum",
+    description:"Clinique Smart Clinical Repair ",
     pop:55,
     cat:"Face Wash & Cleansers",
     price:1900,
@@ -169,7 +169,7 @@ let data5=[
 
 function Skincare(){
   const {state,dispatch}=useContext(CartContext)
-  console.log(state,dispatch,"dasdf")
+//   console.log(state,dispatch,"dasdf")
     const { height, width } = useWindowDimensions();
    
     return <>
@@ -187,7 +187,7 @@ function Skincare(){
  </Box>
  <SimpleGrid  minChildWidth='120px' spacing='40px' mt="8px" p="8px"  key={Date.now()}>
  {data3.map((e)=>{
-    return  <Box textAlign={"center"} >
+    return  <Box textAlign={"center"}  boxShadow='xl'>
     <Image src={e.image} alt='Dan Abramov'  borderRadius='full'/>
     <Heading fontWeight={300}> {e.title}</Heading>
     <Text>{e.detail}</Text>
@@ -203,7 +203,7 @@ function Skincare(){
         
  {data4.map((e)=>{
      
-    return  <Box textAlign={"center"}>
+    return  <Box textAlign={"center"}  boxShadow='xl'>
     <Image src={e.image} alt='Dan Abramov'  borderRadius='full'/>  
     </Box>
  })}
@@ -214,9 +214,11 @@ function Skincare(){
 <Box ml="42px" mr="40px" mb="10px">
 <SimpleGrid columns={{base:1,md:3,lg:3,'xl':4}} spacing={2}  key={Date.now()+2} >
   {data5.map((e)=>{
-     return  <Box  >
+     return  <Box  boxShadow='xl' >
      <Image  margin={"auto"} src={e.img} alt='Dan Abramov' w="120px" />
+     <Text textAlign={"center"} color="black">{e.description}</Text>
      <Text  textAlign={"center"} >Rs- {e.price}</Text>
+   
      <Button w="100%" bg="black" color="white" onClick={()=>dispatch(Add(e))}>Add to cart</Button> 
      </Box>
   })}

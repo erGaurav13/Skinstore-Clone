@@ -2,7 +2,8 @@ import { useReducer } from "react"
 import {reducer,useState,createContext} from "react"
 import {Reducer} from "./Reducer"
 const init={
- items:[]
+ items:[],
+ user:[{email:"gaurav@gmail.com",password:"123"}]
 
 }
 
