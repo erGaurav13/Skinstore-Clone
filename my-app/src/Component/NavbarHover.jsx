@@ -10,9 +10,9 @@ return <div>
      	
   <div class="navbw" id="navbar"  >
         <ul>
-          <li>
+          {/* <li>
             <Link to="/sale" class="anchortag">SALE</Link>
-          </li>
+          </li> */}
           <li>
             
             <Link to="/makeup" class="anchortag"> MAKEUP</Link>

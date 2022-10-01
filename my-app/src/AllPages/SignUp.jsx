@@ -1,4 +1,5 @@
-import { Container } from '@chakra-ui/react'
+import { Container,Box } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 import {useState,useContext,useEffect} from "react";
 import {ADD_USER} from "../AllReducer/Action"
 import { Reducer } from '../AllReducer/Reducer';
@@ -53,21 +54,24 @@ const submit1=(e)=>{
 }
 console.log(form)
     return <>
-    
+    <Box w="100%" bg="gray.300" p="10">
     <form  onSubmit={submit1}>
-    <Container h="100vh" mt="30px">
+    <Container h="70vh" mb="20" mt="30px" bg="white"  boxShadow='md' borderRadius="20" >
            <Heading mb="10px" textAlign={"center"}>Sign-up</Heading>
     <FormControl>
   <FormLabel>Email address</FormLabel>
-  <Input name="email" value={form.email} type='email'  onChange={handelChange}/>
+  <Input name="email" value={form.email} bg="white" type='email'  onChange={handelChange}/>
   <FormHelperText>We'll never share your email.</FormHelperText>
   <FormLabel>Password</FormLabel>
-  <Input name="password" value={form.password}  type='password' onChange={handelChange} />
+  <Input name="password" value={form.password}  bg="white" type='password' onChange={handelChange} />
   <FormHelperText> never share your Password</FormHelperText>
 
- <input type="submit" name="" id="" />
+ <Input bg="green.300" type="submit" name="" id="" />
 </FormControl>
+<Link to="/login"  >Click here to <Text  color="blue">Login ?</Text> </Link>
 </Container>
+
 </form>
+</Box>
     </>
 }

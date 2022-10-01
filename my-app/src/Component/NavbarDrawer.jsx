@@ -11,6 +11,7 @@ import {
   } from '@chakra-ui/react'
   import {HamburgerIcon  } from '@chakra-ui/icons'
 import React,{useState,useEffect} from 'react'
+import { Link } from 'react-router-dom'
 function DrawerExample() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
@@ -25,16 +26,35 @@ function DrawerExample() {
           placement='right'
           onClose={onClose}
           finalFocusRef={btnRef}
+          
         >
-          <DrawerOverlay />
+          <DrawerOverlay color="blue" />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader>Menu</DrawerHeader>
   
             <DrawerBody>
-              <Input placeholder='Type here...' />
+              <Link to="/skincare" >Skincare</Link>
             </DrawerBody>
-  
+            <DrawerBody>
+              <Link to="/fragrance" >Fragrance</Link>
+            </DrawerBody>
+            <DrawerBody>
+              <Link to="/hairCare" >HairCare`</Link>
+            </DrawerBody>
+            <DrawerBody>
+              <Link to="/toolsBrushes" >Tool ANd Brushes</Link>
+            </DrawerBody>
+           
+            <DrawerBody>
+              <Link to="/brands" >Brand</Link>
+            </DrawerBody>
+            <DrawerBody>
+              <Link to="/login" >Login</Link>
+            </DrawerBody>
+            <DrawerBody>
+              <Link to="/signup" >Signup</Link>
+            </DrawerBody>
             <DrawerFooter>
               <Button variant='outline' mr={3} onClick={onClose}>
                 Cancel
