@@ -45,18 +45,18 @@ const dec=(id)=>{
   
    setValue(value+1)
      }
-return <Box display={"flex"}>
+return <Box display={"flex"} >
    
-   <SimpleGrid  columns={{base:1,sm:1,md:2,lg:3,xl:3}} spacing='10px' w="70%" >
+   <SimpleGrid  columns={{base:1,sm:1,md:2,lg:3,xl:3}} p="10" spacing='10px' w="70%"  >
     {data.length!=0?data?.map((e)=>{
       return  <>
      
   <Box textAlign={"center"} boxShadow='xl' >
-    <Image src={e.img}></Image>
+    <Image w="200px" m="auto" src={e.img}></Image>
     <Text>{e.name}</Text>
     <Text>Rs-{e.price}</Text>
-    <Button mb="2px" bg="red.500" color={"white"} onClick={()=>filteritem(e.id)}>Remove</Button>
-    <Box alignContent={"center"}>
+    <Button mb="2px" bg="red.500"  color={"white"} onClick={()=>filteritem(e.id)}>Remove</Button>
+    <Box alignContent={"center"} p="4" >
           <Button bg="green.400" disabled={e.qty>=3} onClick={()=>inc(e.id)} >+</Button>
           <Button  >{e.qty}</Button>
           <Button bg="pink.400" disabled={e.qty<=1} onClick={()=>dec(e.id)}>-</Button>
@@ -64,9 +64,9 @@ return <Box display={"flex"}>
   </Box>
   
       </>
-    }):<Heading>"No Item is added to Cart....."</Heading>}
+    }):<Box w="450%" zIndex={+2} bg="tan"> <Image  src="https://inampro.nic.in/writereaddata/images/emptycart2.png"></Image></Box>}
         </SimpleGrid>     
-       <Box  alignContent={"center"} mb="20px" ml="10px" textAlign={"center"}  boxShadow='xl' bg="white" mt="20px" w="25%" h="300px">
+       <Box  alignContent={"center"} mb="20px" ml="10px" textAlign={"center"}  boxShadow='xl'  bg="white" mt="20px" w="25%" h="300px">
             <Heading size="sm" textAlign={"center"}>Order Summary</Heading>
              <Text color="purple"> Order-Numbaer : {Date.now()}</Text>     
               <Text> Delivery   : 3 Days</Text>

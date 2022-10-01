@@ -3,7 +3,7 @@ import {reducer,useState,createContext} from "react"
 import {Reducer} from "./Reducer"
 const init={
  items:[],
- user:[{email:"gaurav@gmail.com",password:"123"}]
+ user:[{email:"gauravgk1313@gmail.com",password:"123"}]
 
 }
 

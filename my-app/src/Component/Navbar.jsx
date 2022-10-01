@@ -64,15 +64,15 @@ export const Navbar =()=>{
   </Container>
   <ButtonGroup gap='2'>
     {/* <Button colorScheme='teal'>Sign Up</Button> */}
-    <IconButton
+   <Link to="/login">  <IconButton
 //   variant='outline'
   icon={<Account />}
-> </IconButton>
+> </IconButton></Link>
     {/* <Button colorScheme='teal'>Log in</Button> */}
-    <Button bg="white" ><IconButton  icon={<CartIcon/>}/></Button>
+  <Link to="cart" >   <Button bg="white" ><IconButton  icon={<CartIcon/>}/></Button></Link>
   </ButtonGroup>
     </Flex>}
-      <NavbarHover  />
+     {width>=1000?<NavbarHover  />:null}  
       </Box>
 
     </>

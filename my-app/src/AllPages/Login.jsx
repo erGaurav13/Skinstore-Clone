@@ -1,8 +1,11 @@
-import { Container, Input,Heading,useToast,Button ,Spacer} from "@chakra-ui/react"
+import {Text, Box, Container, Input,Heading,useToast,Button ,Spacer} from "@chakra-ui/react"
 import React from "react"
 import { useEffect } from "react"
+import { Link, Navigate } from "react-router-dom"
 import {useState,useContext} from "react"
 import {CartContext} from "../AllReducer/CartContextProvider"
+import {AuthContext } from "../PrivateRoute/AuthContext"
+
 let obj={
     email:"",
     password:""
@@ -27,11 +30,22 @@ export function ToastExample() {
     )
   }
 
+ 
+
+
+  
+
 export const Login =()=>{
     const [form,setForm]=useState(obj)
     const {state,dispatch}=useContext(CartContext)
     const [data,setData]=useState([])
     const [load,setLoad]=useState(false)
+
+  const {isAuth,setIsAuth}=useContext(AuthContext)
+  console.log(isAuth)
+
+
+
     const handelchange=(e)=>{
        
          const {name,value}=e.target;
@@ -58,25 +72,31 @@ setData([...state.user])
       if(flag==true){
        
         alert("succes")
-        
+        setIsAuth(!isAuth)
+      
       }else{
         alert("Check credential")
       }
     }
 
     return <>
-     
-<Container h="60vh" mb="20px" mt="50px" textAlign={"center"} bg="gray.100" p="10" boxShadow='md' borderRadius="20" >
+     <Box w="100%" p="10" bg="gray.300">
+<Container h="60vh" mb="20px" mt="50px" textAlign={"center"} bg="white" p="10" boxShadow='md' borderRadius="20" >
     <Heading mb="20px">Login</Heading>
 <form onSubmit={submit1}>
- <Input placeholder="Email..." type="email" onChange={handelchange} name="email" bg="white" ></Input>
+ <Input placeholder="Email..." type="email" onChange={handelchange} name="email" bg="white" mb="6" ></Input>
 
 
  <Input type="password" onChange={handelchange} bg="white"  name="password" placeholder="Password..."></Input>
  
   <Input mt="20px" bg="green.400"  borderRadius="20" boxShadow='md' type="submit"></Input>
  </form>
+ <Container>
+  OR <br />
+  Create new account <Link to="/signup"  ><Text color="blue">Signup</Text> </Link>
+ </Container>
 </Container>
-
+ 
+</Box>
     </>
 }
