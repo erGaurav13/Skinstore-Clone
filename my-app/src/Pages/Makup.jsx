@@ -1,6 +1,6 @@
 import { Text,Image,Box,SimpleGrid, Heading, Textarea, Button, Container } from '@chakra-ui/react'
 import {useWindowDimensions} from "../Dimension/Dimension"
-import React, { useEffect,useContext } from "react"
+import React, { useEffect,useContext,useState } from "react"
 import {CartContext} from "../AllReducer/CartContextProvider"
 import {Reducer} from "../AllReducer/Reducer"
 import {Add} from "../AllReducer/Action"
@@ -83,7 +83,7 @@ let data5=[
     {
     img:"https://cdn09.nnnow.com/web-images/medium/styles/I98DWHW5MI7/1617177083567/1.jpg",
     name:"CLINIQUE",
-    description:"Even Better Pop Lip Colour Foundation - Blush",
+    description:"Even Better Pop Lip Colour Foundation ",
     pop:45,
     price:2050,
     cat:"Lip Foundation",
@@ -93,7 +93,7 @@ let data5=[
     {
     img:"https://cdn05.nnnow.com/web-images/medium/styles/TQRGXAI5TXU/1595328042752/1.jpg",
     name:"ELIZABETH ARDEN",
-    description:"Beautiful Color Bold Liquid Lip Stick Fearless Red",
+    description:"Beautiful Color Bold Liquid Lip Stick Fearless",
     pop:25,
     price:2075,
     cat:"Lip Stick",
@@ -163,7 +163,7 @@ let data5=[
     {
     img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
     name:"SEPHORA COLLECTION",
-    description:"#Lipstories Lip Stick -27 Hong Kong By Night",
+    description:"#Lipstories Lip Stick -27 Hong Kong ",
     pop:70,
     price:450,
     cat:"Lip Stick",
@@ -176,7 +176,17 @@ function Makup(){
   const {state,dispatch}=useContext(CartContext)
 //   console.log(state,dispatch,"dasdf")
     const { height, width } = useWindowDimensions();
-   
+    const [mapdata,setMapdata]=useState(data5)
+    
+    const sort1=(l,r)=>{
+     let x= data5.sort((a,b)=>{
+      if(a.price < b.price){ return l;}
+      if(a.price > b.price){ return  r;}
+        return 0;
+     })
+    console.log(x)
+     setMapdata([...x])
+    }
     return <>
       <div>
       {/* width: {width} ~ height: {height} */}
@@ -218,8 +228,10 @@ function Makup(){
 <Heading fontWeight={100} >Best Sellers</Heading>
 </Box>
 <Box ml="42px" mr="40px" mb="10px">
+<Button bg="red"  onClick={()=>sort1(1,-1)}>Price:High to Low</Button>
+<Button bg="red" ml="10" onClick={()=>sort1(-1,1)}>Price:Low to High</Button>
 <SimpleGrid columns={{base:1,md:3,lg:3,'xl':4}} spacing={2}  key={Date.now()+2} >
-  {data5.map((e)=>{
+  {mapdata?.map((e)=>{
      return  <Box  boxShadow='xl' >
      <Image  margin={"auto"} src={e.img} alt='Dan Abramov' w="120px" />
      <Text textAlign={"center"} color="black">{e.description}</Text>

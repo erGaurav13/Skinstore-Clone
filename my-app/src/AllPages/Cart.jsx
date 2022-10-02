@@ -1,5 +1,6 @@
 import { CartContext } from "../AllReducer/CartContextProvider"
 import { useContext,useEffect,useState } from "react"
+import { Link } from "react-router-dom"
 import { PLUS,MINUS ,REMOVE} from "../AllReducer/Action"
 import { Reducer } from "../AllReducer/Reducer"
 import { Button,Heading, Grid, GridItem ,Image,Text, VStack,HStack, Box,SimpleGrid} from '@chakra-ui/react'
@@ -71,7 +72,7 @@ return <Box display={"flex"} >
              <Text color="purple"> Order-Numbaer : {Date.now()}</Text>     
               <Text> Delivery   : 3 Days</Text>
               <Text color="">Cart Total    -{total}</Text>
-              <Button margin="auto">Checkout</Button> 
+             <Link to="checkout">  <Button margin="auto">Checkout</Button> </Link>
        </Box>
        
       

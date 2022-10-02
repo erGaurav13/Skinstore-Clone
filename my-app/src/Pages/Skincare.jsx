@@ -1,6 +1,6 @@
 import { Text,Image,Box,SimpleGrid, Heading, Textarea, Button, Container } from '@chakra-ui/react'
 import {useWindowDimensions} from "../Dimension/Dimension"
-import React, { useEffect,useContext } from "react"
+import React, { useEffect,useContext ,useState} from "react"
 import {CartContext} from "../AllReducer/CartContextProvider"
 import {Reducer} from "../AllReducer/Reducer"
 import {Add} from "../AllReducer/Action"
@@ -171,7 +171,17 @@ function Skincare(){
   const {state,dispatch}=useContext(CartContext)
 //   console.log(state,dispatch,"dasdf")
     const { height, width } = useWindowDimensions();
-   
+    const [mapdata,setMapdata]=useState(data5)
+    
+    const sort1=(l,r)=>{
+     let x= data5.sort((a,b)=>{
+      if(a.price < b.price){ return l;}
+      if(a.price > b.price){ return  r;}
+        return 0;
+     })
+    console.log(x)
+     setMapdata([...x])
+    }
     return <>
       <div>
       {/* width: {width} ~ height: {height} */}
@@ -212,8 +222,10 @@ function Skincare(){
 <Heading fontWeight={100} >Best Sellers</Heading>
 </Box>
 <Box ml="42px" mr="40px" mb="10px">
+<Button bg="red"  onClick={()=>sort1(1,-1)}>Price:High to Low</Button>
+<Button bg="red" ml="10" onClick={()=>sort1(-1,1)}>Price:Low to High</Button>
 <SimpleGrid columns={{base:1,md:3,lg:3,'xl':4}} spacing={2}  key={Date.now()+2} >
-  {data5.map((e)=>{
+  {mapdata?.map((e)=>{
      return  <Box  boxShadow='xl' >
      <Image  margin={"auto"} src={e.img} alt='Dan Abramov' w="120px" />
      <Text textAlign={"center"} color="black">{e.description}</Text>
