@@ -12,7 +12,8 @@ import Skincare from "../Pages/Skincare"
 import ToolBrushes from "../Pages/ToolBrushes"
 import { Nopage } from "../Component/Nopage"
 import { PrivateRoute } from "../PrivateRoute/PrivateRoute"
-export const AllRoutes=()=>{
+import {Checkout} from "../Pages/Checkout"
+ export const AllRoutes=()=>{
 
 return <>
 <Routes>
@@ -27,6 +28,7 @@ return <>
  <Route path="/sale" element={<PrivateRoute> <Sale/> </PrivateRoute>} />
  <Route path="/skincare" element={<PrivateRoute><Skincare/> </PrivateRoute>} />
  <Route path="/toolsBrushes" element={<PrivateRoute><ToolBrushes/></PrivateRoute>} />
+ <Route path="cart/checkout" element={<Checkout></Checkout>} />
  <Route path="*" element={<Nopage/>}/>
 </Routes>
  
