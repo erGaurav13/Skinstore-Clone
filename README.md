@@ -50,9 +50,6 @@ This is a simple project. You can use any server to serve up the html pages. Onc
 
 ![image](https://github.com/erGaurav13/chemical-rake-3857/blob/main/img/cart.PNG)
 
-4.Checkout Page
-
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Screenshot%20(108).png)
 
 
 
