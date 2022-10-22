@@ -16,11 +16,12 @@ AS part of unit 4 construct week I cloned the frontend of skinstore.com to the b
 ## Tech Stack:
 
 <p>
-   <img src="https://img.icons8.com/color/64/000000/javascript.png"/>
-   <img src="https://img.icons8.com/color/64/000000/html-5.png"/>
-   <img src="https://img.icons8.com/color/64/000000/css3.png" />
-   <img src="https://img.icons8.com/color/64/000000/json.png"/>
+   <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png"/>
+   <img src="https://cdn-icons-png.flaticon.com/128/174/174854.png"/>
+   <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" />
+   <img src="https://cdn-icons-png.flaticon.com/128/541/541488.png"/>
    <img src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png" />
+   <img src="https://camo.githubusercontent.com/eec63163a5209f78e8b0e3d6ab82eb981d03c4453a7a466f4fdc063da09f2a4d/68747470733a2f2f692e696d6775722e636f6d2f454d796b5a62332e706e67" />
 </p>
 
 ## Features:
