@@ -43,6 +43,7 @@ const submit1=(e)=>{
         if(x.length!=0){
             alert("Please enter another email")
         }else{
+            alert("Sign Up Successfully")
             console.log("age bdo")
             dispatch(ADD_USER(form))
             console.log()
