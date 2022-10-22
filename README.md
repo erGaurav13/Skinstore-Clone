@@ -20,7 +20,7 @@ AS part of unit 4 construct week I cloned the frontend of skinstore.com to the b
    <img src="https://img.icons8.com/color/64/000000/html-5.png"/>
    <img src="https://img.icons8.com/color/64/000000/css3.png" />
    <img src="https://img.icons8.com/color/64/000000/json.png"/>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+   <img src="[https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png](https://cdn-icons-png.flaticon.com/128/1126/1126012.png)" />
 </p>
 
 ## Features:
