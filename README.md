@@ -37,25 +37,23 @@ This is a simple project. You can use any server to serve up the html pages. Onc
 
 1. This is the Landing page of Sephora
 
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Landing%20Page.png)
+![image](https://github.com/erGaurav13/chemical-rake-3857/blob/main/img/product.PNG)
 
 
 2.This is Sign-up and Sign IN Page
 
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Signup.png)
+![image](https://github.com/erGaurav13/chemical-rake-3857/blob/main/img/login.PNG)
 
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Login%20Page.png)
+![image](https://github.com/erGaurav13/chemical-rake-3857/blob/main/img/signup.PNG)
 
 3. This is the basket.
 
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Cart%20Page.png)
+![image](https://github.com/erGaurav13/chemical-rake-3857/blob/main/img/cart.PNG)
 
 4.Checkout Page
 
 ![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Screenshot%20(108).png)
 
-5.Payment Confirm
 
-![image](https://github.com/erGaurav13/Sephore-Clone/blob/main/Sephora/Payment.png)
 
 
