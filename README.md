@@ -5,7 +5,7 @@ Skinstore is a   multinational retailer of personal care and beauty products. Fe
 AS part of unit 4 construct week I cloned the frontend of skinstore.com to the best of my ability  within the span of 5 days.
 
 [Original link](https://www.skinstore.com/)
-[Deploy link](https://super-cool-site-by-ergaurav13.netlify.app/login)
+[Deploy link](https://super-cool-site-by-ergaurav13.netlify.app)
 
 
 
